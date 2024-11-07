@@ -1,0 +1,10 @@
+include:
+  - remote: 'https://raw.githubusercontent.com/MSA-API-Management/AutoGuard/refs/tags/v1/AutoGuard.gitlab-ci.yml'
+    inputs:
+      mvn_src_dir: "."
+
+autoGuard:
+  extends: .autoGuard
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  stage: test
