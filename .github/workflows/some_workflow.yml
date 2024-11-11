@@ -1,0 +1,8 @@
+on: [pull_request]
+
+jobs:
+  some_job:
+    runs-on: ubuntu
+    steps:
+      - name: 'Print Hello World'
+        run: echo "Hello World"
