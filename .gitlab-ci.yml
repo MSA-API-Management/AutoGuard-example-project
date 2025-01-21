@@ -1,8 +1,9 @@
 include:
   - remote: 'https://raw.githubusercontent.com/MSA-API-Management/AutoGuard/refs/tags/v1/AutoGuard.gitlab-ci.yml'
     inputs:
-      mvn_src_dir: "."
+      source_dir: "."
 
+# Extend .autoGuard job to add configuration like a job rule or stage 
 autoGuard:
   extends: .autoGuard
   rules:
