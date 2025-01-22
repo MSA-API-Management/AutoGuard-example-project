@@ -15,9 +15,7 @@ public class CustomerRepository {
 
     // Save a new customer
     public Customer save(Customer customer) {
-        if (customer.getId() == null) {
-            customer.setId(idCounter.incrementAndGet());
-        }
+        customer.setId(idCounter.incrementAndGet());
         customers.add(customer);
         return customer;
     }
